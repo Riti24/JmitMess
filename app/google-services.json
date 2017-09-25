@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "232431018767",
+    "firebase_url": "https://jmitmess-2ccd7.firebaseio.com",
+    "project_id": "jmitmess-2ccd7",
+    "storage_bucket": "jmitmess-2ccd7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:232431018767:android:510a796358c5f957",
+        "android_client_info": {
+          "package_name": "com.apkglobal.jmitmess"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "232431018767-7302tg33ri6corojk9uq2s3de6cupk4s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.apkglobal.jmitmess",
+            "certificate_hash": "456640dbe551e4113a24aa857f6e495d11fdb7f8"
+          }
+        },
+        {
+          "client_id": "232431018767-44a647v7gltre5jaqtjipgbu1jeht8jh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDhGRyx6jHCfR7GmpLVEaaKjkiHf2wjARM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "232431018767-44a647v7gltre5jaqtjipgbu1jeht8jh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

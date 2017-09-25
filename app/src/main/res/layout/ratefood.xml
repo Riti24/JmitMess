@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.apkglobal.jmitmess.Ratefood">
+    <TextView
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="120dp"
+        android:id="@+id/rate_me1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rate Breakfast"
+        android:textColor="#ef0d18"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        />
+
+    <RatingBar
+        android:layout_marginLeft="50dp"
+        android:layout_below="@+id/rate_me1"
+        android:id="@+id/ratingBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1.0" />
+
+    <Button
+        android:layout_marginLeft="150dp"
+        android:layout_below="@+id/ratingBar"
+        android:id="@+id/submit1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        />
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="150dp"
+        android:id="@+id/rate_me2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rate Lunch"
+        android:textStyle="bold"
+        android:textColor="#ef0d18"
+        android:textSize="20dp"/>
+
+    <RatingBar
+        android:layout_marginLeft="50dp"
+        android:layout_below="@+id/rate_me2"
+        android:id="@+id/ratingBar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1.0" />
+
+    <Button
+        android:layout_marginLeft="150dp"
+        android:layout_below="@+id/ratingBar"
+        android:id="@+id/submit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+
+        />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="150dp"
+        android:id="@+id/rate_me3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rate Dinner"
+        android:textStyle="bold"
+        android:textColor="#ef0d18"
+        android:textSize="20dp"/>
+
+    <RatingBar
+        android:layout_marginLeft="50dp"
+        android:layout_below="@+id/rate_me3"
+        android:id="@+id/ratingBar3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:numStars="5"
+        android:stepSize="1.0" />
+
+    <Button
+        android:layout_marginLeft="150dp"
+        android:layout_below="@+id/ratingBar"
+        android:id="@+id/submit3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+
+        />
+
+
+
+</LinearLayout>
