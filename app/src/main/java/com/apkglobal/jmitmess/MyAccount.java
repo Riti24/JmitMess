@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,7 +37,7 @@ public class MyAccount extends Fragment {
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getContext());
         boolean Islogin = prefs.getBoolean("Islogin", false); // get value of last login status
-
+        Log.d("login",""+Islogin);
          tv_name=(TextView)view.findViewById(R.id.tv_name);
         tv_email=(TextView)view.findViewById(R.id.tv_email);
         if(Islogin)
@@ -45,7 +46,7 @@ public class MyAccount extends Fragment {
             if (user != null) {
 
                 // Name, email address, and profile photo Url
-                String name = user.getDisplayName();
+                //String name = user.getDisplayName();
                 String email = user.getEmail();
                 //Uri photoUrl = user.getPhotoUrl();
 
@@ -53,7 +54,7 @@ public class MyAccount extends Fragment {
                 // authenticate with your backend server, if you have one. Use
                 // FirebaseUser.getToken() instead.
                 String uid = user.getUid();
-                tv_name.setText(name.toString());
+               // tv_name.setText(name.toString());
                 tv_email.setText(email.toString());
 
             }
