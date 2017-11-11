@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 /**
  * Created by Ritika on 7/19/2017.
@@ -54,12 +55,15 @@ public class Feedback extends Fragment {
         public void onClick(View v) {
             Feedback fd;
             Intent intent = new Intent(Intent.ACTION_SEND);
-            intent.putExtra(intent.EXTRA_EMAIL, new String[]{"happy@jmit.ac.in"});
+            intent.putExtra(intent.EXTRA_EMAIL, new String[]{"ritikabhattacharya248@gmail.com"});
             intent.putExtra(intent.EXTRA_SUBJECT, "My feedback for today's food");
 
-            intent.putExtra(intent.EXTRA_TEXT, ed_message.getText().toString());
+            intent.putExtra(intent.EXTRA_TEXT,ed_message.getText().toString());
             intent.setType("email/rfc822");
             startActivity(Intent.createChooser(intent, "Send Email"));
+            Toast.makeText(getActivity(), "Your feedback is being recorded", Toast.LENGTH_LONG).show();
+
+
         }
     }
 

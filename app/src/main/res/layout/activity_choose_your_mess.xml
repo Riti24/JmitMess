@@ -5,7 +5,7 @@
     android:id="@+id/scrollbar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/firstbcg"
+    android:background="@drawable/platefork"
     android:orientation="vertical"
     tools:context="com.apkglobal.jmitmess.ChooseYourMess">
 
@@ -44,6 +44,18 @@
         android:layout_marginLeft="130sp"
         android:layout_marginTop="100sp"
         android:text="Mess incharge" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Administrator"
+        android:layout_marginLeft="130sp"
+        android:layout_marginTop="50dip"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:id="@+id/tv_admin"
+        android:textStyle="bold"
+        />
+
 
 
 </LinearLayout>

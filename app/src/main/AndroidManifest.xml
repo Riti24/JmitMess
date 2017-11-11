@@ -26,7 +26,10 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".SplashActivity" />
         <activity android:name=".SignupActivity" />
-        <activity android:name=".InchargeSettings"></activity>
+        <activity android:name=".InchargeSettings" />
+        <activity android:name=".Admin" />
+        <activity android:name=".InchargeLogin" />
+        <activity android:name=".RegisterIncharge"></activity>
     </application>
 
 </manifest>

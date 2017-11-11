@@ -87,6 +87,8 @@ public class MenuActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.logout) {
             FirebaseAuth.getInstance().signOut();
+            Intent i=new Intent(MenuActivity.this,LoginActivity.class);
+            startActivity(i);
             return true;
         }
 
@@ -125,10 +127,12 @@ public class MenuActivity extends AppCompatActivity
         Fragment fragment = null;
         switch(itemId)
         {
+            case R.id.nav_Menu:
+                fragment=new ViewFood();
+                break;
+
             case R.id.nav_myaccount:
                 fragment=new MyAccount();
-
-
                 break;
             case R.id.nav_Feedback:
                 fragment =new Feedback();
@@ -144,6 +148,8 @@ public class MenuActivity extends AppCompatActivity
                 share.putExtra(Intent.EXTRA_TEXT, "Please download my application");
                 share.setType("text/plain");
                 startActivity(Intent.createChooser(share,"Share App"));
+                break;
+            default: fragment=new ViewFood();
                 break;
 
         }

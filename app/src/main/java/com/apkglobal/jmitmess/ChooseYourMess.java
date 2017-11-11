@@ -7,11 +7,15 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
-public class ChooseYourMess extends AppCompatActivity implements AdapterView.OnItemSelectedListener, View.OnClickListener {
+public class ChooseYourMess extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     Spinner spinner;
     Button btn_incharge;
+    TextView tv_admin;
+
+
     String []name={"Select Your mess","Padmavatti Bhavan","Jagat Bhavan"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +28,25 @@ public class ChooseYourMess extends AppCompatActivity implements AdapterView.OnI
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
         btn_incharge=(Button)findViewById(R.id.btn_incharge);
+        tv_admin=(TextView) findViewById(R.id.tv_admin);
+       // btn_incharge.setOnClickListener(this);
+        //tv_admin.setOnClickListener(this);
+        btn_incharge.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               Intent i=new Intent(ChooseYourMess.this,InchargeLogin.class);
+                        startActivity(i);
 
-        btn_incharge.setOnClickListener(this);
+            }
+        });
+        tv_admin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(ChooseYourMess.this,Admin.class);
+                startActivity(i);
 
+            }
+        });
 
     }
 
@@ -40,11 +60,16 @@ public class ChooseYourMess extends AppCompatActivity implements AdapterView.OnI
                 startActivity(in);*/
                 break;
             case 1:
+
                 Intent x=new Intent(ChooseYourMess.this,MenuActivity.class);
+                x.putExtra(Intent.EXTRA_TEXT, "girls");
                 startActivity(x);
                 break;
             case 2:
+
                 Intent z=new Intent(ChooseYourMess.this,MenuActivity.class);
+                z.putExtra(Intent.EXTRA_TEXT, "boys");
+
                 startActivity(z);
                 break;
             default:
@@ -61,11 +86,12 @@ public class ChooseYourMess extends AppCompatActivity implements AdapterView.OnI
         //r
     }
 
-    @Override
+  /*  @Override*//*
     public void onClick(View v) {
         Intent i=new Intent(ChooseYourMess.this,LoginActivity.class);
         startActivity(i);
-    }
+
+    }*/
     @Override
     public void onBackPressed(){
         int backpress=0;
@@ -73,7 +99,8 @@ public class ChooseYourMess extends AppCompatActivity implements AdapterView.OnI
         Toast.makeText(getApplicationContext(), " Press Back again to Exit ", Toast.LENGTH_SHORT).show();
 
         if (backpress>1) {
-            this.finish();
+           // this.finish();
+            super.onBackPressed();
         }
     }
 }
