@@ -62,13 +62,13 @@ public class ChooseYourMess extends AppCompatActivity implements AdapterView.OnI
             case 1:
 
                 Intent x=new Intent(ChooseYourMess.this,MenuActivity.class);
-                x.putExtra(Intent.EXTRA_TEXT, "girls");
+               // x.putExtra(Intent.EXTRA_TEXT, "girls");
                 startActivity(x);
                 break;
             case 2:
 
                 Intent z=new Intent(ChooseYourMess.this,MenuActivity.class);
-                z.putExtra(Intent.EXTRA_TEXT, "boys");
+                //z.putExtra(Intent.EXTRA_TEXT, "boys");
 
                 startActivity(z);
                 break;

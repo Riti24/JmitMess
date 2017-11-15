@@ -5,7 +5,8 @@
     android:id="@+id/scrollbar"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/platefork"
+    android:background="@drawable/jmitmess"
+
     android:orientation="vertical"
     tools:context="com.apkglobal.jmitmess.ChooseYourMess">
 
@@ -22,6 +23,7 @@
             android:layout_marginBottom="5dp"
             android:layout_marginTop="10dip"
             android:text="Choose Mess:"
+            android:textColor="#fff" 
             android:textAlignment="center"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -32,6 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:prompt="@string/spinner_title"
+
             android:textAlignment="center" />
 
     </LinearLayout>
@@ -52,6 +55,7 @@
         android:layout_marginTop="50dip"
         android:textAlignment="center"
         android:textSize="20dp"
+        android:textColor="#fff"
         android:id="@+id/tv_admin"
         android:textStyle="bold"
         />

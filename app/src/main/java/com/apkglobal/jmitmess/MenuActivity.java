@@ -149,9 +149,13 @@ public class MenuActivity extends AppCompatActivity
                 share.setType("text/plain");
                 startActivity(Intent.createChooser(share,"Share App"));
                 break;
-            default: fragment=new ViewFood();
-                break;
+            //default: fragment=new ViewFood();
+               // break;
 
+        }
+        if(fragment==null)
+        {
+            fragment=new ViewFood();
         }
         FragmentManager fm=getSupportFragmentManager();
 

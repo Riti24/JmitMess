@@ -16,7 +16,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        int delay=3000;
+        int delay=4000;
         Handler handler=new Handler();
         handler.postDelayed(new Runnable() {
             @Override
