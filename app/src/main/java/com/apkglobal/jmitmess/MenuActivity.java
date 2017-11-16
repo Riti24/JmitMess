@@ -46,7 +46,9 @@ public class MenuActivity extends AppCompatActivity
         toggle.syncState();
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+
         navigationView.setNavigationItemSelectedListener(this);
+        byDefaultItemSelected(R.id.nav_Menu);
     }
 
     @Override

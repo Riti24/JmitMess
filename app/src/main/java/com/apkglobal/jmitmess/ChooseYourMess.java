@@ -1,5 +1,6 @@
 package com.apkglobal.jmitmess;
 import android.content.Intent;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -24,7 +25,7 @@ public class ChooseYourMess extends AppCompatActivity implements AdapterView.OnI
         setContentView(R.layout.activity_choose_your_mess);
         /*setContentView(R.layout.spinner);*/
         spin=(Spinner)findViewById(R.id.spinner);
-        ArrayAdapter<String>adapter=new ArrayAdapter<String>(ChooseYourMess.this,android.R.layout.simple_spinner_item,name);
+        ArrayAdapter<String>adapter=new ArrayAdapter<String>(ChooseYourMess.this,R.layout.spinner_item,name);
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spin.setAdapter(adapter);
@@ -55,6 +56,7 @@ public class ChooseYourMess extends AppCompatActivity implements AdapterView.OnI
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        PreferenceManager.getDefaultSharedPreferences(this).edit().putInt("mode",position).commit();
         switch(position)
         {
             case 0:
