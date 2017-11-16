@@ -11,22 +11,24 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class ChooseYourMess extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    Spinner spinner;
+    String []name={"Select Your mess","Padmavatti Bhavan","Jagat Bhavan"};
+    Spinner spin;
     Button btn_incharge;
     TextView tv_admin;
 
 
-    String []name={"Select Your mess","Padmavatti Bhavan","Jagat Bhavan"};
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_your_mess);
         /*setContentView(R.layout.spinner);*/
-        spinner=(Spinner)findViewById(R.id.spinner);
+        spin=(Spinner)findViewById(R.id.spinner);
         ArrayAdapter<String>adapter=new ArrayAdapter<String>(ChooseYourMess.this,android.R.layout.simple_spinner_item,name);
+
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
-        spinner.setOnItemSelectedListener(this);
+        spin.setAdapter(adapter);
+        spin.setOnItemSelectedListener(this);
         btn_incharge=(Button)findViewById(R.id.btn_incharge);
         tv_admin=(TextView) findViewById(R.id.tv_admin);
        // btn_incharge.setOnClickListener(this);
