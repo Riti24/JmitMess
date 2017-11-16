@@ -1,8 +1,10 @@
 package com.apkglobal.jmitmess;
 import android.content.Intent;
+import android.os.SystemClock;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -10,6 +12,8 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Calendar;
 
 public class ChooseYourMess extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     String []name={"Select Your mess","Padmavatti Bhavan","Jagat Bhavan"};
@@ -96,15 +100,18 @@ public class ChooseYourMess extends AppCompatActivity implements AdapterView.OnI
         startActivity(i);
 
     }*/
+    int backpress=0;
+    long time=0;
     @Override
     public void onBackPressed(){
-        int backpress=0;
-        backpress = (backpress + 1);
-        Toast.makeText(getApplicationContext(), " Press Back again to Exit ", Toast.LENGTH_SHORT).show();
-
-        if (backpress>1) {
-           // this.finish();
+        if(backpress==0 || System.currentTimeMillis()-time>2000){
+            time= System.currentTimeMillis();
+            Log.d("time",time+"");
+            backpress=1;
+            Toast.makeText(getApplicationContext(), " Press Back again to Exit ", Toast.LENGTH_SHORT).show();
+        }else{
             super.onBackPressed();
         }
+
     }
 }
